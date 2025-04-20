@@ -8,7 +8,7 @@ typedef struct{
         char espece[25];
         int annee;
         float poids;
-        char citation[];
+        char citation[250];
     }Animal;
 
 int main(){
