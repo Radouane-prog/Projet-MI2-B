@@ -1,34 +1,39 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#define MAX_LINE 200;
-#define animal.txt:
-#define animal_temp.txt;
-
-
-void adopter_animal(){
+void adopter_animal(Animal tab[], int *taille){
+    int i,j;
     int num_id;
+    int trouve = 0;
+    int selection = -4;
+
     printf("\n=== Adoption d'un animal ===\n");
     printf("Saisir le numéro d'identification de l'animal a adopter : ");
     scanf("%d", &num_id);
 
-    FILE *f = fopen(animal.txt, "r");
-    FILE *temp = fopen(animal_temp.txt, "w");
-    char ligne[10];
-    int id_actuel;
-    int trouve = 0;
+    for(int i=0;i<*taille;i++){
+        if(tab[i].id == num_id){
+            selection = i;
+            printf("L'animal %d a été trouvé\n", num_id);
 
-    while (fgets(ligne, sizeof(ligne), fichier)) {
-        scanf(ligne, "%d", &id_actuel);
-
-        if (id_actuel == num_id) {
-            printf("Animal avec l'id %d adopté avec succès.\n", num_id);
-            trouve = 1;
         }
-        fputs(ligne, temp);
+        
     }
-    remove(animaux.txt);
-    rename(animal_temp, animal.txt);
+    if(selection == -4){
+        printf("L'animal %d n'existe pas\n", num_id);
+        return;
+    }
+    else{
+
+    }
+
+
+
+
+
 }
 
+void supprimer_element(Animal tab[], int *taille, int index){
+    for(int i=index;i<*taille-1;i++){
+        tab[i] = tab[i+1];
+    }
+    (*taille)--;
+    printf("L'animal a été adopté avec succès\n");
+}
