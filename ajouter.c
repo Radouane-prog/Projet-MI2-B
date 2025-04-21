@@ -1,4 +1,10 @@
-void selectionneur_espece(char *espece){
+
+
+
+
+
+
+ void selectionneur_espece(char *espece){
     int choix;
     do{
             printf(" | selectionneur_espece | \n");
@@ -6,12 +12,12 @@ void selectionneur_espece(char *espece){
             printf("  ==== Taper 2 si l'espece est un chiens  \n");
             printf("  ==== Taper 3 si l'espece est un hamsters  \n");
             printf("  ==== Taper 4 si l'espece est une autruches  \n");
-            
+
             scanf("%d",&choix);
-            
-           
+
+
     }while( choix < 1 || choix > 4);
-    
+
      if(choix == 1){
          strncpy(espece, "Chat");
             }
@@ -24,48 +30,54 @@ void selectionneur_espece(char *espece){
     if(choix == 4){
        strncpy(espece, "autruches");
           }
-          
+
     return espece;
 }
 
-
-ANIMAUX creation_animaux(){
+  
+  
+  
+  
+  
+void creation_animaux(ANIMAUX tab[],int Taille){
+    
+    if(taille + 1 > 49){
+     printf(" ==================================\n");
+    printf(" ==== Le refuge est plein :( ==== \n");
+    printf(" ==================================\n");
+ }
+ 
+ else{
     ANIMAUX a1;
-    
+
     printf(" ==================================\n");
-    printf(" ==== Constrcution de l'animal ==== \n");
+    printf(" ==== Construction de l'animal ==== \n");
     printf(" ==================================\n");
-    
-    printf("Veuillez saissir le nomde l'animal");
+
+    printf("Veuillez saissir le nom de l'animal");
     scanf("%s",a1.nom);
-    
+
     printf("Veuillez selectionnez son espece :");
     a1.espece = selectionneur_espece();
-    
+
     printf("Veuillez asissir son année de naissance : \n");
     scanf("%d",&a1.naissance);
-    
+
      printf("Veuillez asissir son poids : \n");
     scanf("%d",&a1.poids);
-    
+
     printf("Veuillez fournir un commentaire pour cette animal : \n");
     scanf("%s",a1.commentaire);
-    
+
     a1.num = rand() % 51;
     
     printf(" ==================================\n");
-    printf(" ==== Affichage de l'animal ==== \n");
+    printf(" ==== %s  a été ajouté au refuge ! ==== \n",a1.nom);
     printf(" ==================================\n");
     
+    tab[taille+1] = a1;
     
-    printf(" Nom : %s \n",a1.nom);
-    printf(" Espece : %s \n",a1.espece);
-    printf(" Date de naissance : %d \n",a1.naissance);
-    printf(" Poids: %d \n",a1.poids);
-    printf(" Commentaire : %s \n",a1.commentaire);
-    
-    printf(" ==================================\n"):
-    
-    return a1;
-    
+ }
+   
+
 }
