@@ -1,3 +1,4 @@
+
 void adopter_animal(Animal tab[], int *taille){
     int i,j;
     int num_id;
@@ -12,7 +13,7 @@ void adopter_animal(Animal tab[], int *taille){
         if(tab[i].id == num_id){
             selection = i;
             printf("L'animal %d a été trouvé\n", num_id);
-
+            break;
         }
         
     }
@@ -21,11 +22,10 @@ void adopter_animal(Animal tab[], int *taille){
         return;
     }
     else{
-
+        supprimer_element(tab,taille,selection);
     }
-
-
-
+    printf("L'animal %d a été adopté avec succès\n", num_id);
+    printf("Il reste %d animaux dans le chenil \n", *taille);
 
 
 }
@@ -36,4 +36,5 @@ void supprimer_element(Animal tab[], int *taille, int index){
     }
     (*taille)--;
     printf("L'animal a été adopté avec succès\n");
+    
 }
