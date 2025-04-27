@@ -1,5 +1,12 @@
 
-
+void copier(char *espece_copier , char  *animal){
+    int i = 0; 
+    while(animal[i] != '\0') {
+         espece_copier[i] = animal[i];
+        i++;
+        }
+            espece[i] = '\0'; 
+    }
 
 
 
@@ -18,20 +25,23 @@
 
     }while( choix < 1 || choix > 4);
 
-     if(choix == 1){
-         strncpy(espece, "Chat");
-            }
-     if(choix == 2){
-        strncpy(espece, "chiens");
-         }
-     if(choix == 3){
-       strncpy(espece, "hamsters");
-        }
-    if(choix == 4){
-       strncpy(espece, "autruches");
-          }
+     if (choix == 1) {
+        copier(espece, "Chat");
+        breck;
+    }
+    if (choix == 2) {
+        copier(espece, "chiens");
+        breck;
+    }
+    if (choix == 3) {
+        copier(espece, "hamsters");
+        breck;
+    }
+    if (choix == 4) {
+        copier(espece, "autruches");
+        breakk;
+    }
 
-    return espece;
 }
 
   
@@ -69,7 +79,14 @@ void creation_animaux(ANIMAUX tab[],int Taille){
     printf("Veuillez fournir un commentaire pour cette animal : \n");
     scanf("%s",a1.commentaire);
 
-    a1.num = rand() % 51;
+    a.num = rand % 51;
+    for(int i=0 ; i<Taille;i++){
+        while(tab[i].num == a.num) {
+             a.num = rand % 51;
+        }
+    }
+    
+    
     
     printf(" ==================================\n");
     printf(" ==== %s  a été ajouté au refuge ! ==== \n",a1.nom);
