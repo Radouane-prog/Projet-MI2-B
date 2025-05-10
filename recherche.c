@@ -46,7 +46,7 @@ void recherche(Animal tab[], int taille){
             scanf("%s",choix_age);
         }
     }else{
-        choix_age = "NULL";
+        copier_chaine(choix_age, "NULL");
     }
     
     if( !(strEgale(choix_espece, "NULL")) || !(strEgale(choix_nom, "NULL")) || !(strEgale(choix_age, "NULL")) ){
@@ -55,14 +55,14 @@ void recherche(Animal tab[], int taille){
     
     for(int i=0; i<taille; i++){
     
-        if( (bool_espece == 'o') && (bool_age == 'n') (bool_nom == 'n') ){
+        if( (bool_espece == 'o') && (bool_age == 'n') && (bool_nom == 'n') ){
             if(tab[i].espece == choix_espece){
                 printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                 compteur_affichage++;
             }
         }
         
-        if( (bool_espece == 'n') && (bool_age == 'o') (bool_nom == 'n') ){
+        if( (bool_espece == 'n') && (bool_age == 'o') && (bool_nom == 'n') ){
             if(choix_age == "senior"){
                 if( (2025-tab[i].annee) > 10){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
@@ -76,14 +76,14 @@ void recherche(Animal tab[], int taille){
             }
         }
         
-        if( (bool_espece == 'n') && (bool_age == 'n') (bool_nom == 'o') ){
+        if( (bool_espece == 'n') && (bool_age == 'n') && (bool_nom == 'o') ){
             if(tab[i].nom == choix_nom){
                 printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                 compteur_affichage++;
             }
         }
         
-        if( (bool_espece == 'o') && (bool_age == 'o') (bool_nom == 'n') ){
+        if( (bool_espece == 'o') && (bool_age == 'o') && (bool_nom == 'n') ){
             if(choix_age == "senior"){
                 if( ((2025-tab[i].annee) > 10) && (tab[i].espece == choix_espece) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
@@ -97,14 +97,14 @@ void recherche(Animal tab[], int taille){
             }
         }
         
-        if( (bool_espece == 'o') && (bool_age == 'n') (bool_nom == 'o') ){
+        if( (bool_espece == 'o') && (bool_age == 'n') && (bool_nom == 'o') ){
             if((tab[i].nom == choix_nom) && (tab[i].espece == choix_espece)){
                 printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                 compteur_affichage++;
             }
         }
         
-        if( (bool_espece == 'n') && (bool_age == 'o') (bool_nom == 'o') ){
+        if( (bool_espece == 'n') && (bool_age == 'o') && (bool_nom == 'o') ){
             if(choix_age == "senior"){
                 if( ((2025-tab[i].annee) > 10) && (tab[i].nom == choix_nom) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
@@ -118,7 +118,7 @@ void recherche(Animal tab[], int taille){
             }
         }
         
-         if( (bool_espece == 'o') && (bool_age == 'o') (bool_nom == 'o') ){
+         if( (bool_espece == 'o') && (bool_age == 'o') && (bool_nom == 'o') ){
             if(choix_age == "senior"){
                 if( ((2025-tab[i].annee) > 10) && (tab[i].nom == choix_nom) && (tab[i].espece == choix_espece) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
