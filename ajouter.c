@@ -58,14 +58,14 @@ void creation_animaux(Animal tab[],int taille){
     printf("Veuillez selectionnez son espece :");
     selectionneur_espece(a1.espece);
 
-    printf("Veuillez asissir son année de naissance : \n");
-    scanf("%d",&a1.naissance);
+    printf("Veuillez saisir son année de naissance : \n");
+    scanf("%d",&a1.annee);
 
      printf("Veuillez asissir son poids : \n");
     scanf("%d",&a1.poids);
 
     printf("Veuillez fournir un commentaire pour cette animal : \n");
-    scanf("%s",a1.commentaire);
+    scanf("%s",a1.citation);
     
     a1.num = rand % 51;
     for(int i=0 ; i<taille;i++){
@@ -86,3 +86,4 @@ void creation_animaux(Animal tab[],int taille){
    
 
 }
+
