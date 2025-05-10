@@ -9,11 +9,12 @@ void Menu(Animal tab[], int *taille){
     printf("Afficher l'inventaire du refuge (4) \n");
     printf("Afficher la quantité de croquettes nécessaire pour nourir les animaux du refuge quotidiennement (5) \n");
     printf("Afficher la durée de travail nécessaire pour nettoyer le refuge pour une semaine (6) \n");
+    printf("Quitter le programme (0) \n");
     printf("TOUT TEXTE DEVRA ETRE ENTREZ EN MINUSCULES POUR UN FONCTIONNEMENT OPTIMALE.\n \n");
     printf("Veuillez choisir la fonctionalités souhaité en entrant le chiffre correspondant:");
     scanf("%d",choix_fonctionalite);
     
-    while( (choix_fonctionalite != 1) && (choix_fonctionalite != 2) && (choix_fonctionalite != 3) && (choix_fonctionalite != 4) && (choix_fonctionalite != 5) && (choix_fonctionalite != 6) ){
+    while( (choix_fonctionalite != 1) && (choix_fonctionalite != 2) && (choix_fonctionalite != 3) && (choix_fonctionalite != 4) && (choix_fonctionalite != 5) && (choix_fonctionalite != 6) && (choix_fonctionalite != 0) ){
         printf("Erreur. Veuillez choisir la fonctionalités souhaité en entrant le chiffre correspondant:");
         scanf("%d",choix_fonctionalite);
     }
@@ -42,8 +43,10 @@ void Menu(Animal tab[], int *taille){
     }else if(choix_fonctionalite == 5){
         day_Food(tab,taille);
         Menu(tab,taille);
-    }else{
+    }else if(choix_fonctionalite == 6){
         day_Clean(tab,taille);
         Menu(tab,taille);
+    }else{
+        return;
     }
 }
