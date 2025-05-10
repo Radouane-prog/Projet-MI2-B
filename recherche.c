@@ -9,7 +9,7 @@ void recherche(Animal tab[], int taille){
     printf("Souhaitez-vous rechercher votre animal par son nom (o/n):");
     scanf("%c",&bool_nom);
     while( (bool_nom != 'o') || (bool_nom != 'n') ){
-        printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:")
+        printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:");
         scanf("%c",&bool_nom);
     }
     if(bool_nom == 'o'){
@@ -22,7 +22,7 @@ void recherche(Animal tab[], int taille){
     printf("Souhaitez-vous rechercher votre animal par son espece (o/n):");
     scanf("%c",&bool_espece);
     while( (bool_espece != 'o') || (bool_espece != 'n') ){
-        printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:")
+        printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:");
         scanf("%c",&bool_espece);
     }
     if(bool_espece == 'o'){
@@ -35,7 +35,7 @@ void recherche(Animal tab[], int taille){
     printf("Souhaitez-vous rechercher votre animal par son âge(senior ou jeune) (o/n):");
     scanf("%c",&bool_age);
     while( (bool_age != 'o') || (bool_age != 'n') ){
-        printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:")
+        printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:");
         scanf("%c",&bool_age);
     }
     if(bool_age == 'o'){
@@ -51,7 +51,7 @@ void recherche(Animal tab[], int taille){
     
     if( (choix_espece != "NULL") || (choix_nom != "NULL") || (choix_age != "NULL") ){
     
-    printf("Voici les animaux de ChenYI-Tech qui correspondent à votre recherche:\n")
+    printf("Voici les animaux de ChenYI-Tech qui correspondent à votre recherche:\n");
     
     for(int i=0; i<taille; i++){
     
