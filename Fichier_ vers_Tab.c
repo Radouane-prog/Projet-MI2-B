@@ -33,7 +33,7 @@ int lire_animaux_fichier(char *nomFichier, Animal tab[], int capacite) {
             a.espece,
             &a.annee,
             &a.poids,
-            a.commentaire
+            a.citation
         );
 
         if (nb == 6) {
