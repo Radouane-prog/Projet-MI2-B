@@ -5,7 +5,7 @@ void copier(char *espece_copier , char  *animal){
          espece_copier[i] = animal[i];
         i++;
         }
-            espece[i] = '\0'; 
+            espece_copier[i] = '\0'; 
     }
 
 
@@ -25,23 +25,24 @@ void copier(char *espece_copier , char  *animal){
 
     }while( choix < 1 || choix > 4);
 
-     if (choix == 1) {
-        copier(espece, "Chat");
-        breck;
+    switch (choix) {
+        case 1:
+            copier(espece, "Chat");
+            printf("😺 Chat sélectionné !\n");
+            break;
+        case 2:
+            copier(espece, "Chien");
+            printf("🐶 Chien sélectionné !\n");
+            break;
+        case 3:
+            copier(espece, "Hamster");
+            printf("🐹 Hamster sélectionné !\n");
+            break;
+        case 4:
+            copier(espece, "Autruche");
+            printf("🪿 Autruche sélectionnée !\n");
+            break;
     }
-    if (choix == 2) {
-        copier(espece, "chiens");
-        breck;
-    }
-    if (choix == 3) {
-        copier(espece, "hamsters");
-        breck;
-    }
-    if (choix == 4) {
-        copier(espece, "autruches");
-        breakk;
-    }
-
 }
 
   
@@ -53,22 +54,22 @@ void creation_animaux(ANIMAUX tab[],int Taille){
     
     if(taille + 1 > 49){
      printf(" ==================================\n");
-    printf(" ==== Le refuge est plein :( ==== \n");
+    printf(" ==== ❌ Le refuge est plein  ==== \n");
     printf(" ==================================\n");
  }
  
  else{
     ANIMAUX a1;
-
+    char sprc;
     printf(" ==================================\n");
-    printf(" ==== Construction de l'animal ==== \n");
+    printf(" ==== 🔨 Construction de l'animal ==== \n");
     printf(" ==================================\n");
 
     printf("Veuillez saissir le nom de l'animal");
     scanf("%s",a1.nom);
 
     printf("Veuillez selectionnez son espece :");
-    a1.espece = selectionneur_espece();
+    selectionneur_espece(a1.espece);
 
     printf("Veuillez asissir son année de naissance : \n");
     scanf("%d",&a1.naissance);
@@ -78,18 +79,21 @@ void creation_animaux(ANIMAUX tab[],int Taille){
 
     printf("Veuillez fournir un commentaire pour cette animal : \n");
     scanf("%s",a1.commentaire);
-
-    a.num = rand % 51;
+    
+    a1.food =0;
+    a1.clean = 0;
+    
+    a1.num = rand % 51;
     for(int i=0 ; i<Taille;i++){
         while(tab[i].num == a.num) {
-             a.num = rand % 51;
+             a.num = rand()% 51;
         }
     }
     
     
     
     printf(" ==================================\n");
-    printf(" ==== %s  a été ajouté au refuge ! ==== \n",a1.nom);
+    printf(" ==== ✅ %s  a été ajouté au refuge ! ==== \n",a1.nom);
     printf(" ==================================\n");
     
     tab[taille+1] = a1;
