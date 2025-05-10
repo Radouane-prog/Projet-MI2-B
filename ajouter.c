@@ -1,16 +1,3 @@
-
-void copier(char *espece_copier , char  *animal){
-    int i = 0; 
-    while(animal[i] != '\0') {
-         espece_copier[i] = animal[i];
-        i++;
-        }
-            espece_copier[i] = '\0'; 
-    }
-
-
-
-
  void selectionneur_espece(char *espece){
     int choix;
     do{
@@ -27,19 +14,19 @@ void copier(char *espece_copier , char  *animal){
 
     switch (choix) {
         case 1:
-            copier(espece, "Chat");
+            copier_chaine(espece, "Chat");
             printf("😺 Chat sélectionné !\n");
             break;
         case 2:
-            copier(espece, "Chien");
+            copier_chaine(espece, "Chien");
             printf("🐶 Chien sélectionné !\n");
             break;
         case 3:
-            copier(espece, "Hamster");
+            copier_chaine(espece, "Hamster");
             printf("🐹 Hamster sélectionné !\n");
             break;
         case 4:
-            copier(espece, "Autruche");
+            copier_chaine(espece, "Autruche");
             printf("🪿 Autruche sélectionnée !\n");
             break;
     }
