@@ -41,10 +41,10 @@ void Menu(Animal tab[], int *taille){
         inventaire(tab,*taille,choix_tri);
         Menu(tab,taille);
     }else if(choix_fonctionalite == 5){
-        day_Food(tab,taille);
+        day_Food(tab,*taille);
         Menu(tab,taille);
     }else if(choix_fonctionalite == 6){
-        day_Clean(tab,taille);
+        day_Clean(tab,*taille);
         Menu(tab,taille);
     }else{
         return;
