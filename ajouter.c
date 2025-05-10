@@ -67,10 +67,10 @@ void creation_animaux(Animal tab[],int taille){
     printf("Veuillez fournir un commentaire pour cette animal : \n");
     scanf("%s",a1.citation);
     
-    a1.num = rand % 51;
+    a1.id = rand % 51;
     for(int i=0 ; i<taille;i++){
-        while(a1.num == tab[i].num) {
-             a1.num = rand()% 51;
+        while(a1.id == tab[i].id) {
+             a1.id = rand()% 51;
         }
     }
     
@@ -86,4 +86,3 @@ void creation_animaux(Animal tab[],int taille){
    
 
 }
-
