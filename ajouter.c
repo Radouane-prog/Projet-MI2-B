@@ -14,19 +14,19 @@
 
     switch (choix) {
         case 1:
-            copier_chaine(espece, "Chat");
+            copier_chaine(espece, "chat");
             printf("😺 Chat sélectionné !\n");
             break;
         case 2:
-            copier_chaine(espece, "Chien");
+            copier_chaine(espece, "chien");
             printf("🐶 Chien sélectionné !\n");
             break;
         case 3:
-            copier_chaine(espece, "Hamster");
+            copier_chaine(espece, "hamster");
             printf("🐹 Hamster sélectionné !\n");
             break;
         case 4:
-            copier_chaine(espece, "Autruche");
+            copier_chaine(espece, "autruche");
             printf("🪿 Autruche sélectionnée !\n");
             break;
     }
