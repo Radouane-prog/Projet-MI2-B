@@ -16,7 +16,7 @@ void recherche(Animal tab[], int taille){
         printf("Entrez le nom de votre animal:");
         scanf("%s", choix_nom);
     }else{
-        choix_nom = "NULL";
+        copier_chaine(choix_nom, "NULL");
     }
     
     printf("Souhaitez-vous rechercher votre animal par son espece (o/n):");
@@ -29,7 +29,7 @@ void recherche(Animal tab[], int taille){
         printf("Entrez l'espèce de votre animal:");
         scanf("%s",choix_espece);
     }else{
-        choix_espece = "NULL";
+        copier_chaine(choix_espece, "NULL");
     }
     
     printf("Souhaitez-vous rechercher votre animal par son âge(senior ou jeune) (o/n):");
@@ -41,7 +41,7 @@ void recherche(Animal tab[], int taille){
     if(bool_age == 'o'){
         printf("Entrez la tranche d'âge de votre animal (jeune ou senior):");
         scanf("%s",choix_age);
-        while((choix_age != "senior") || (choix_age != "jeune")){
+        while( !(strEgale(choix_age, "senior")) || !(strEgale(choix_age, "senior")) ){
             printf("Erreur. Vous devez écrire senior ou jeune:");
             scanf("%s",choix_age);
         }
@@ -49,7 +49,7 @@ void recherche(Animal tab[], int taille){
         choix_age = "NULL";
     }
     
-    if( (choix_espece != "NULL") || (choix_nom != "NULL") || (choix_age != "NULL") ){
+    if( !(strEgale(choix_espece, "NULL")) || !(strEgale(choix_nom, "NULL")) || !(strEgale(choix_age, "NULL")) ){
     
     printf("Voici les animaux de ChenYI-Tech qui correspondent à votre recherche:\n");
     
