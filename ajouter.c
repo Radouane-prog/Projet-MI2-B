@@ -37,7 +37,7 @@
   
   
   
-void creation_animaux(Animal tab[],int Taille){
+void creation_animaux(Animal tab[],int taille){
     
     if(taille + 1 > 49){
      printf(" ==================================\n");
@@ -68,7 +68,7 @@ void creation_animaux(Animal tab[],int Taille){
     scanf("%s",a1.commentaire);
     
     a1.num = rand % 51;
-    for(int i=0 ; i<Taille;i++){
+    for(int i=0 ; i<taille;i++){
         while(a1.num == tab[i].num) {
              a1.num = rand()% 51;
         }
