@@ -69,7 +69,7 @@ void creation_animaux(Animal tab[],int Taille){
     
     a1.num = rand % 51;
     for(int i=0 ; i<Taille;i++){
-        while(tab[i].num == a1.num) {
+        while(a1.num == tab[i].num) {
              a1.num = rand()% 51;
         }
     }
