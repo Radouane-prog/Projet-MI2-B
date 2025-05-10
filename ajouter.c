@@ -37,7 +37,7 @@
   
   
   
-void creation_animaux(ANIMAUX tab[],int Taille){
+void creation_animaux(Animal tab[],int Taille){
     
     if(taille + 1 > 49){
      printf(" ==================================\n");
