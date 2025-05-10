@@ -3,12 +3,12 @@
 void supprimer_element(Animal tab[], int *taille, int index){
 
     if(index == 49){
-        tab[49].nom = "NULL";
-        tab[49].espece = "NULL";
+        copier_chaine(tab[49].nom, "NULL");
+        copier_chaine(tab[49].espece, "NULL");
         tab[49].id = -5;
         tab[49].annee = -5;
         tab[49].poids = -5.0;
-        tab[49].citation = "NULL";
+        copier_chaine(tab[49].citation, "NULL");
 
     }else{
         for(int i=index;i<*taille-1;i++){
