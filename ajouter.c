@@ -46,7 +46,7 @@ void creation_animaux(Animal tab[],int taille){
  }
  
  else{
-    ANIMAUX a1;
+    Animal a1;
     char sprc;
     printf(" ==================================\n");
     printf(" ==== 🔨 Construction de l'animal ==== \n");
