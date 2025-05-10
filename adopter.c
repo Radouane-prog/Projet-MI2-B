@@ -35,6 +35,4 @@ void supprimer_element(Animal tab[], int *taille, int index){
         tab[i] = tab[i+1];
     }
     (*taille)--;
-    printf("L'animal a été adopté avec succès\n");
-    
 }
