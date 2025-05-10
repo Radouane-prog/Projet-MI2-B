@@ -1,4 +1,12 @@
 
+
+void supprimer_element(Animal tab[], int *taille, int index){
+    for(int i=index;i<*taille-1;i++){
+        tab[i] = tab[i+1];
+    }
+    (*taille)--;
+}
+
 void adopter_animal(Animal tab[], int *taille, int capacitemax){
     int i,j;
     int num_id;
@@ -36,11 +44,4 @@ void adopter_animal(Animal tab[], int *taille, int capacitemax){
     }
     printf("L'animal %d a été adopté avec succès\n", num_id);
     printf("Il reste %d animaux dans le chenil \n", *taille);
-}
-
-void supprimer_element(Animal tab[], int *taille, int index){
-    for(int i=index;i<*taille-1;i++){
-        tab[i] = tab[i+1];
-    }
-    (*taille)--;
 }
