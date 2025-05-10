@@ -4,7 +4,7 @@ float day_Food(Animal tab[], int taille) {
 
     for(int i=0;i<taille;i++){
         if (strEgale(tab[i].espece, "chat") || strEgale(tab[i].espece, "chien")) {
-        if (tab[i].age < 2) {
+        if ( (2025-tab[i].annee) < 2) {
             consommation += 500;
         } else {
             consommation += 0.1 * tab[i].poids * 1000; 
