@@ -3,15 +3,15 @@ int day_Clean(Animal tab[], int taille) {
 
     for(int i=0;i<taille;i++){
 
-        if (str_Egale(tab[i].espece, "chat") || str_Egale(tab[i].espece, "hamster")){
+        if (strEgale(tab[i].espece, "chat") || strEgale(tab[i].espece, "hamster")){
         nettoyage += 10*7 + 20;
         } 
 
-        else if (str_Egale(tab[i].espece, "autruche")){
+        else if (strEgale(tab[i].espece, "autruche")){
         nettoyage += 20*7 + 45;
         } 
 
-        else if (str_Egale(a.espece, "chien")) {
+        else if (strEgale(tab[i].espece, "chien")) {
         nettoyage += 5*7 + 20;
         }
     }
