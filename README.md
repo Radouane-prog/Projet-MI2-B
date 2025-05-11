@@ -35,7 +35,7 @@ Le projet permet de réaliser les opérations suivantes au sein du refuge :
 
 ## Prérequis
 Pour compiler et exécuter ce projet, vous aurez besoin de :
-* Un compilateur C (comme GCC, Clang, etc.)
+* Un compilateur C
 * L'outil `make`
 
 ## Utilisation
