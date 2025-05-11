@@ -4,8 +4,9 @@ Projet de fin d'année pré-ING-1 informatique.
 ## Sommaire
 -[Présentation](#présentation)
 -[Fonctionnalités](#fonctionnalités)
--[Technologie utilisée](#technologieutlisée)
+-[Technologie utilisée](#technologie-utlisée)
 -[Utilisation](#utilisation)
+-[Prérequis](#prérequis)
 
 ## Présentation du projet 
 Le projet ChenYl-TECH consiste à programmer une application permettant la gestion d'un refuge pour animaux étant 100% interactif par l'utilisateur. Le refuge contient 4 espèces d'animaux ( chat, chiens, hamsters et autruches ).
@@ -31,6 +32,8 @@ Le projet permet de réaliser les opérations suivantes au sein du refuge :
 
 ## Technologie utilisée 
 * Langage C
+
+## Prérequis
 Pour compiler et exécuter ce projet, vous aurez besoin de :
 * Un compilateur C (comme GCC, Clang, etc.)
 * L'outil `make`
