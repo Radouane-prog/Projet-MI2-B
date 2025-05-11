@@ -1,15 +1,14 @@
 # Projet-MI2-B : ChenYl-TECH 
 Projet de fin d'année pré-ING-1 informatique.
 
-## Présentation du projet 
-Le projet ChenYl-TECH consiste à programmer une application permettant la gestion d'un refuge pour animaux étant 100% interactif par l'utilisateur. Le refuge contient 4 espèces d'animaux ( chat, chiens, hamsters et autruches ).
-
-
 ## Sommaire
 -[Présentation](#présentation)
 -[Fonctionnalités](#fonctionnalités)
 -[Technologie utilisée](#technologieutlisée)
 -[Utilisation](#utilisation)
+
+## Présentation du projet 
+Le projet ChenYl-TECH consiste à programmer une application permettant la gestion d'un refuge pour animaux étant 100% interactif par l'utilisateur. Le refuge contient 4 espèces d'animaux ( chat, chiens, hamsters et autruches ).
 
 ## Fonctionnalités
 Le projet permet de réaliser les opérations suivantes au sein du refuge : 
