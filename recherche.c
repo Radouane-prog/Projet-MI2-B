@@ -20,20 +20,19 @@ void recherche(Animal tab[], int taille){
     }
     
     printf("Souhaitez-vous rechercher votre animal par son espece (o/n):");
-    scanf("%c",&bool_espece);
+    scanf(" %c",&bool_espece);
     while( (bool_espece != 'o') && (bool_espece != 'n') ){
         printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:");
         scanf("%c",&bool_espece);
     }
     if(bool_espece == 'o'){
-        printf("Entrez l'espèce de votre animal:");
-        scanf("%s",choix_espece);
+        selectionneur_espece(choix_espece);
     }else{
         copier_chaine(choix_espece, "NULL");
     }
     
     printf("Souhaitez-vous rechercher votre animal par son âge(senior ou jeune) (o/n):");
-    scanf("%c",&bool_age);
+    scanf(" %c",&bool_age);
     while( (bool_age != 'o') && (bool_age != 'n') ){
         printf("Erreur. Vous devez entrez o pour OUI ou n pour NON pas autre chose:");
         scanf("%c",&bool_age);
@@ -56,14 +55,14 @@ void recherche(Animal tab[], int taille){
     for(int i=0; i<taille; i++){
     
         if( (bool_espece == 'o') && (bool_age == 'n') && (bool_nom == 'n') ){
-            if(tab[i].espece == choix_espece){
+            if(strEgale(tab[i].espece, choix_espece)){
                 printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                 compteur_affichage++;
             }
         }
         
         if( (bool_espece == 'n') && (bool_age == 'o') && (bool_nom == 'n') ){
-            if(choix_age == "senior"){
+            if(strEgale(choix_age, "senior")){
                 if( (2025-tab[i].annee) > 10){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
@@ -77,20 +76,20 @@ void recherche(Animal tab[], int taille){
         }
         
         if( (bool_espece == 'n') && (bool_age == 'n') && (bool_nom == 'o') ){
-            if(tab[i].nom == choix_nom){
+            if(strEgale(tab[i].nom, choix_nom)){
                 printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                 compteur_affichage++;
             }
         }
         
         if( (bool_espece == 'o') && (bool_age == 'o') && (bool_nom == 'n') ){
-            if(choix_age == "senior"){
-                if( ((2025-tab[i].annee) > 10) && (tab[i].espece == choix_espece) ){
+            if(strEgale(choix_age, "senior")){
+                if( ((2025-tab[i].annee) > 10) && (strEgale(tab[i].espece, choix_espece)) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
                 }
             }else{
-                if( ((2025-tab[i].annee) < 2) && (tab[i].espece == choix_espece) ){
+                if( ((2025-tab[i].annee) < 2) && (strEgale(tab[i].espece, choix_espece)) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
                 }
@@ -98,20 +97,20 @@ void recherche(Animal tab[], int taille){
         }
         
         if( (bool_espece == 'o') && (bool_age == 'n') && (bool_nom == 'o') ){
-            if((tab[i].nom == choix_nom) && (tab[i].espece == choix_espece)){
+            if((strEgale(tab[i].nom, choix_nom)) && (strEgale(tab[i].espece, choix_espece))){
                 printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                 compteur_affichage++;
             }
         }
         
         if( (bool_espece == 'n') && (bool_age == 'o') && (bool_nom == 'o') ){
-            if(choix_age == "senior"){
-                if( ((2025-tab[i].annee) > 10) && (tab[i].nom == choix_nom) ){
+            if(strEgale(choix_age, "senior")){
+                if( ((2025-tab[i].annee) > 10) && (strEgale(tab[i].nom, choix_nom)) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
                 }
             }else{
-                if( ((2025-tab[i].annee) < 2) && (tab[i].nom == choix_nom) ){
+                if( ((2025-tab[i].annee) < 2) && (strEgale(tab[i].nom, choix_nom)) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
                 }
@@ -119,13 +118,13 @@ void recherche(Animal tab[], int taille){
         }
         
          if( (bool_espece == 'o') && (bool_age == 'o') && (bool_nom == 'o') ){
-            if(choix_age == "senior"){
-                if( ((2025-tab[i].annee) > 10) && (tab[i].nom == choix_nom) && (tab[i].espece == choix_espece) ){
+            if(strEgale(choix_age, "senior")){
+                if( ((2025-tab[i].annee) > 10) && (strEgale(tab[i].nom, choix_nom)) && (strEgale(tab[i].espece, choix_espece)) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
                 }
             }else{
-                if( ((2025-tab[i].annee) < 2) && (tab[i].nom == choix_nom) && (tab[i].espece == choix_espece) ){
+                if( ((2025-tab[i].annee) < 2) && (strEgale(tab[i].nom, choix_nom)) && (strEgale(tab[i].espece, choix_espece)) ){
                     printf("ID: %d    NOM: %s    ESPECE: %s    ANNEE DE NAISSANCE: %d    POIDS: %f      COMMENTAIRE: %s \n",tab[i].id, tab[i].nom, tab[i].espece, tab[i].annee, tab[i].poids, tab[i].citation);
                     compteur_affichage++;
                 }
