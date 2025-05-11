@@ -29,7 +29,7 @@ Le projet permet de réaliser les opérations suivantes au sein du refuge :
 * **Utilitaires :**
 * Fonctions de manipulation de chaînes de caractères (`fonctions_strings.c`).
 
-##Technologie utilisée 
+## Technologie utilisée 
 * Langage C
 Pour compiler et exécuter ce projet, vous aurez besoin de :
 * Un compilateur C (comme GCC, Clang, etc.)
