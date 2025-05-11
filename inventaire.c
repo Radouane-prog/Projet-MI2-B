@@ -4,7 +4,7 @@ void inventaire(Animal tab[], int taille, int choix_tri){
         for(int i=0;i<taille;i++){
             index_decroissant[i] = i;
         }
-        printf("Inventaire par âge décroissant: \n");
+        printf("📋 Inventaire par âge décroissant: \n");
         printf("Nombre d'animaux: %d \n",taille);
         for (int i = 0; i < taille - 1; i++) {
         for (int j = 0; j < taille - 1 - i; j++) {
@@ -26,7 +26,7 @@ void inventaire(Animal tab[], int taille, int choix_tri){
         }
         int q = taille/4;
         int reste = taille%4;
-        printf("Inventaire par tranche d'âge: \n");
+        printf("📋 Inventaire par tranche d'âge: \n");
         printf("Nombre d'animaux: %d \n",taille);
         for (int i = 0; i < taille - 1; i++) {
         for (int j = 0; j < taille - 1 - i; j++) {
