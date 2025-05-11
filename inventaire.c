@@ -30,7 +30,7 @@ void inventaire(Animal tab[], int taille, int choix_tri){
         printf("Nombre d'animaux: %d \n",taille);
         for (int i = 0; i < taille - 1; i++) {
         for (int j = 0; j < taille - 1 - i; j++) {
-            if (tab[j].annee > tab[j+1].annee) {
+            if (tab[index_croissant[j]].annee > tab[index_croissant[j+1]].annee) {
                 int temp = index_croissant[j];
                 index_croissant[j] = index_croissant[j + 1];
                 index_croissant[j + 1] = temp;
@@ -51,3 +51,4 @@ void inventaire(Animal tab[], int taille, int choix_tri){
     }
     
 }
+
