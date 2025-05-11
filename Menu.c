@@ -12,11 +12,11 @@ void Menu(Animal tab[], int *taille){
     printf("Quitter le programme (0) \n");
     printf("TOUT TEXTE DEVRA ETRE ENTREZ EN MINUSCULES POUR UN FONCTIONNEMENT OPTIMALE.\n \n");
     printf("Veuillez choisir la fonctionalités souhaité en entrant le chiffre correspondant:");
-    scanf("%d",choix_fonctionalite);
+    scanf(" %d",&choix_fonctionalite);
     
     while( (choix_fonctionalite != 1) && (choix_fonctionalite != 2) && (choix_fonctionalite != 3) && (choix_fonctionalite != 4) && (choix_fonctionalite != 5) && (choix_fonctionalite != 6) && (choix_fonctionalite != 0) ){
         printf("Erreur. Veuillez choisir la fonctionalités souhaité en entrant le chiffre correspondant:");
-        scanf("%d",choix_fonctionalite);
+        scanf(" %d",&choix_fonctionalite);
     }
     
     if(choix_fonctionalite == 1){
