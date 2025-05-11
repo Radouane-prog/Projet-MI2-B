@@ -34,3 +34,23 @@ int lire_entier() {
         }
     }
 }
+
+
+char lire_char() {
+    char buffer[100];
+    char caractere;
+    char extra;
+
+    while (1) {
+        if (fgets(buffer, sizeof(buffer), stdin) == NULL) {
+            continue; // Relire si erreur de lecture
+        }
+
+        // On s'assure qu'il y a exactement un caractère, sans autre contenu
+        if (sscanf(buffer, " %c %c", &caractere, &extra) == 1) {
+            return caractere;
+        } else {
+            printf("Entrée invalide. Veuillez entrer un seul caractère.\n");
+        }
+    }
+}
