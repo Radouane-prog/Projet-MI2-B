@@ -31,9 +31,6 @@
             break;
     }
 }
-
-  
-  
   
   
   
@@ -52,8 +49,8 @@ void creation_animaux(Animal tab[],int taille){
     printf(" ==== 🔨 Construction de l'animal ==== \n");
     printf(" ==================================\n");
 
-    printf("Veuillez saissir le nom de l'animal");
-    scanf("%s",a1.nom);
+    printf("Veuillez saisir le nom de l'animal:");
+    scanf(" %[^\n]",a1.nom);
 
     printf("Veuillez selectionnez son espece :");
     selectionneur_espece(a1.espece);
@@ -62,12 +59,12 @@ void creation_animaux(Animal tab[],int taille){
     scanf("%d",&a1.annee);
 
      printf("Veuillez asissir son poids : \n");
-    scanf("%d",&a1.poids);
+    scanf("%f",&a1.poids);
 
     printf("Veuillez fournir un commentaire pour cette animal : \n");
-    scanf("%s",a1.citation);
+    scanf(" %[^\n]",a1.citation);
     
-    a1.id = rand % 51;
+    a1.id = rand() % 51;
     for(int i=0 ; i<taille;i++){
         while(a1.id == tab[i].id) {
              a1.id = rand()% 51;
@@ -80,7 +77,7 @@ void creation_animaux(Animal tab[],int taille){
     printf(" ==== ✅ %s  a été ajouté au refuge ! ==== \n",a1.nom);
     printf(" ==================================\n");
     
-    tab[taille+1] = a1;
+    tab[taille] = a1;
     
  }
    
