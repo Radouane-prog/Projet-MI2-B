@@ -22,7 +22,7 @@ Le projet permet de réaliser les opérations suivantes au sein du refuge :
 * Gérer le nourrissage des animaux (`day_Food.c`).
 * Gérer le nettoyage des enclos (`day_Clean.c`).
 * **Gestion des Données :**
-* Charger les données des animaux depuis un fichier vers une structure en mémoire (`Fichier_vers_Tab.c`).
+* Charger les données des animaux depuis un fichier vers untableau de structure " Animal "  (`Fichier_vers_Tab.c`).
 * Sauvegarder les données des animaux depuis la mémoire vers un fichier (`TabVersFichier.c`).
 * **Interface Utilisateur :**
 * Un menu interactif pour naviguer entre les différentes fonctionnalités (`Menu.c`).
