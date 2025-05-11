@@ -1,4 +1,4 @@
- void selectionneur_espece(char *espece){
+void selectionneur_espece(char *espece){
     int choix;
     do{
             printf(" | selectionneur_espece | \n");
@@ -7,7 +7,7 @@
             printf("  ==== Taper 3 si l'espece est un hamsters  \n");
             printf("  ==== Taper 4 si l'espece est une autruches  \n");
 
-            scanf("%d",&choix);
+            choix = lire_entier();
 
 
     }while( choix < 1 || choix > 4);
@@ -55,13 +55,21 @@ void creation_animaux(Animal tab[],int taille){
     printf("Veuillez selectionnez son espece :");
     selectionneur_espece(a1.espece);
 
-    printf("Veuillez saisir son année de naissance : \n");
-    scanf("%d",&a1.annee);
+    printf("Veuillez saisir son année de naissance : ");
+    a1.annee = lire_entier();
+    while(a1.annee < 0){
+        printf("Erreur. Veuillez saisir son année de naissance :");
+        a1.annee = lire_entier();
+    }
 
-     printf("Veuillez asissir son poids : \n");
-    scanf("%f",&a1.poids);
+     printf("Veuillez saisir son poids :");
+     a1.poids = lire_flottant();
+     while(a1.poids < 0){
+        printf("Erreur. Veuillez saisir son poids :");
+        a1.poids = lire_flottant();
+     }
 
-    printf("Veuillez fournir un commentaire pour cette animal : \n");
+    printf("Veuillez fournir un commentaire pour cette animal :");
     scanf(" %[^\n]",a1.citation);
     
     a1.id = rand() % 51;
