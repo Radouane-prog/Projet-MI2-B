@@ -12,6 +12,7 @@ typedef struct{
     }Animal;
 
 #include "fonctions_strings.c"
+#include "robuste.c"
 #include "adopter.c"
 #include "ajouter.c"
 #include "day_Food.c"
