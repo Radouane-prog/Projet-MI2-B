@@ -1,7 +1,10 @@
 void selectionneur_espece(char *espece){
     int choix;
     do{
+            printf(" ------------------------\n");
             printf(" | selectionneur_espece | \n");
+            printf(" ------------------------\n");
+        
             printf("  ==== Taper 1 si l'espece est un chat  \n");
             printf("  ==== Taper 2 si l'espece est un chiens  \n");
             printf("  ==== Taper 3 si l'espece est un hamsters  \n");
