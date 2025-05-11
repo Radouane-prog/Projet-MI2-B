@@ -1,15 +1,25 @@
 void Menu(Animal tab[], int *taille){
     int choix_fonctionalite;
     int choix_tri;
+    printf("\n \n \n");
     printf("Bienvenue au refuge ChenYI-TECH ! \n");
+    printf("\n \n");
     printf("Voici les différentes fonctionalités de notre refuge:\n");
+    printf("\n");
     printf("Rechercher un Animal dans notre refuge (1) \n");
+    printf("\n");
     printf("Ajouter un Animal dans notre refuge (2) \n");
+    printf("\n");
     printf("Supprimer un Animal qui a été adopter (3) \n");
+    printf("\n");
     printf("Afficher l'inventaire du refuge (4) \n");
+    printf("\n");
     printf("Afficher la quantité de croquettes nécessaire pour nourir les animaux du refuge quotidiennement (5) \n");
+    printf("\n");
     printf("Afficher la durée de travail nécessaire pour nettoyer le refuge pour une semaine (6) \n");
+    printf("\n");
     printf("Quitter le programme (0) \n");
+    printf("\n");
     printf("TOUT TEXTE DEVRA ETRE ENTREZ EN MINUSCULES POUR UN FONCTIONNEMENT OPTIMALE.\n \n");
     printf("Veuillez choisir la fonctionalités souhaité en entrant le chiffre correspondant:");
     scanf(" %d",&choix_fonctionalite);
