@@ -18,7 +18,7 @@ Le projet permet de réaliser les opérations suivantes au sein du refuge :
 * Permettre l'adoption d'animaux (`adopter.c`).
 * Afficher l'inventaire des animaux présents (`inventaire.c`).
 * Rechercher des animaux spécifiques (`recherche.c`).
-* **Tâches Quotidiennes :**
+* **Tâches Quotidiennes / Hebdomadaires :**
 * Gérer le nourrissage des animaux (`day_Food.c`).
 * Gérer le nettoyage des enclos (`day_Clean.c`).
 * **Gestion des Données :**
