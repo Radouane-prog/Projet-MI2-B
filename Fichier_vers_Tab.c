@@ -15,7 +15,7 @@ int lire_animaux_fichier(char *nomFichier, Animal tab[], int capacite) {
     FILE *f = fopen(nomFichier, "r");
     
     if (f == NULL) {
-        printf("Impossible d'ouvrir le fichier.\n");
+        printf("❌ Impossible d'ouvrir le fichier.\n");
         return -1;
     }
 
@@ -40,7 +40,7 @@ int lire_animaux_fichier(char *nomFichier, Animal tab[], int capacite) {
         if (nb == 6) {
             tab[compteur++] = a;
         } else {
-            printf("Ligne mal formatée ignorée : %s\n", ligne);
+            printf("❌ Ligne mal formatée ignorée : %s\n", ligne);
         }
     }
 
