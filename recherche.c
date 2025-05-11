@@ -7,10 +7,10 @@ void recherche(Animal tab[], int taille){
     int compteur_affichage = 0;
     
     printf("🔍 \033[1;36mSouhaitez-vous rechercher votre animal par son nom ? (o/n):\033[0m ");
-    scanf(" %c",&bool_nom);
+    bool_nom=lire_char();
     while( (bool_nom != 'o') && (bool_nom != 'n') ){
         printf("❌ \033[1;31mErreur\033[0m. Veuillez entrer \033[1mo\033[0m (oui) ou \033[1mn\033[0m (non) : ");
-        scanf("%c",&bool_nom);
+        bool_nom=lire_char();
     }
     if(bool_nom == 'o'){
         printf("✏️  Entrez le nom de votre animal : ");
@@ -20,10 +20,10 @@ void recherche(Animal tab[], int taille){
     }
     
     printf("🔍 Souhaitez-vous rechercher votre animal par son espece (o/n):");
-    scanf(" %c",&bool_espece);
+    bool_espece=lire_char();
     while( (bool_espece != 'o') && (bool_espece != 'n') ){
         printf("❌ \033[1;31mErreur\033[0m. Veuillez entrer \033[1mo\033[0m (oui) ou \033[1mn\033[0m (non) : ");
-        scanf("%c",&bool_espece);
+        bool_espece=lire_char();
     }
     if(bool_espece == 'o'){
         selectionneur_espece(choix_espece);
@@ -32,10 +32,10 @@ void recherche(Animal tab[], int taille){
     }
     
     printf("🔍 Souhaitez-vous rechercher votre animal par son âge(senior ou jeune) (o/n):");
-    scanf(" %c",&bool_age);
+    bool_age=lire_char();
     while( (bool_age != 'o') && (bool_age != 'n') ){
         printf("❌ \033[1;31mErreur\033[0m. Veuillez entrer \033[1mo\033[0m (oui) ou \033[1mn\033[0m (non) : ");
-        scanf("%c",&bool_age);
+        bool_age=lire_char();
     }
     if(bool_age == 'o'){
         printf("Entrez la tranche d'âge de votre animal (jeune ou senior):");
@@ -139,7 +139,7 @@ void recherche(Animal tab[], int taille){
     
     }else{
         printf("Vous avez effectué une recherche qui comporte aucun filtre. Souhaitez-vous que j'affiche tout les animaux ? (o/n):");
-        scanf("%c",&choix_aucun_filtre);
+        choix_aucun_filtre=lire_char();
         if(choix_aucun_filtre == 'o'){
             for(int i=0; i<taille; i++){
                 printf("Voici tout les animaux: \n");
@@ -151,3 +151,4 @@ void recherche(Animal tab[], int taille){
     
     
 }
+
