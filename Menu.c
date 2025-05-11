@@ -16,11 +16,11 @@ void Menu(Animal tab[], int *taille){
 
     printf("\n⚠️  \033[1;31mVeuillez entrer tout texte en minuscules pour un fonctionnement optimal.\033[0m\n");
     printf("👉 \033[1;36mEntrez le numéro correspondant à l'action souhaitée : \033[0m");
-    scanf(" %d",&choix_fonctionalite);
+    choix_fonctionalite = lire_entier();
     
     while( (choix_fonctionalite != 1) && (choix_fonctionalite != 2) && (choix_fonctionalite != 3) && (choix_fonctionalite != 4) && (choix_fonctionalite != 5) && (choix_fonctionalite != 6) && (choix_fonctionalite != 0) ){
         printf("❌ \033[1;31m  Erreur ! Veuillez choisir la fonctionalités souhaité en entrant le chiffre correspondant: \033[0m\n");
-        scanf(" %d",&choix_fonctionalite);
+        choix_fonctionalite = lire_entier();
     }
     
     if(choix_fonctionalite == 1){
@@ -37,10 +37,10 @@ void Menu(Animal tab[], int *taille){
         Menu(tab,taille);
     }else if(choix_fonctionalite == 4){
         printf("📋Souhaitez-vous afficher l'inventaire par âge décroissant(1) ou par quartile d'âge(0) :");
-        scanf("%d",&choix_tri);
+        choix_tri = lire_entier();
         while( (choix_tri!=0) && (choix_tri!=1) ){
             printf("❌ Erreur. Souhaitez-vous afficher l'inventaire par âge décroissant(1) ou par quartile d'âge(0) :");
-            scanf("%d",&choix_tri);
+            choix_tri = lire_entier();
         }
         inventaire(tab,*taille,choix_tri);
         Menu(tab,taille);
