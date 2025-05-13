@@ -1,3 +1,5 @@
+
+// procedure permettant d'afficher le menu et d'y naviguer 
 void Menu(Animal tab[], int *taille){
     int choix_fonctionalite;
     int choix_tri;
