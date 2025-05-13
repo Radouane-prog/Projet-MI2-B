@@ -1,4 +1,4 @@
-
+// procedure permettant de supprimer les  \n a la fin de chaque ligne pour les remplacer par des \0 
 void retirer_saut_de_ligne(char *chaine) {
     int i = 0;
     while (chaine[i] != '\0') {
@@ -10,7 +10,7 @@ void retirer_saut_de_ligne(char *chaine) {
     }
 }
 
-
+// fonction retournant le nombre d'animaux present dans le fichier et de transofmrer un fihcier d'animaux en un tableau d'animaux 
 int lire_animaux_fichier(char *nomFichier, Animal tab[], int capacite) {
     FILE *f = fopen(nomFichier, "r");
     
