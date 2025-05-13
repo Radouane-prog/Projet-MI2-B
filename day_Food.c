@@ -1,4 +1,4 @@
-
+// Fonction calculant la quantitée de nourriture suffisante pour chaque espèce d'animaux
 float day_Food(Animal tab[], int taille) {
     float consommation = 0;
 
