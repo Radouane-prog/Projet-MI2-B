@@ -19,7 +19,7 @@ int lire_animaux_fichier(char *nomFichier, Animal tab[], int capacite) {
         return -1;
     }
 
-    char ligne[256]; // taille augmentée pour stocker toute une ligne
+    char ligne[256]; 
     int compteur = 0;
 
     while (fgets(ligne, sizeof(ligne), f) && compteur < capacite) {
