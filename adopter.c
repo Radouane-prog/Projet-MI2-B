@@ -1,5 +1,5 @@
 
-
+// procédure permettant de supprimer un élement d'un tableau d'animaux
 void supprimer_element(Animal tab[], int *taille, int index){
 
     if(index == 49){
@@ -18,6 +18,7 @@ void supprimer_element(Animal tab[], int *taille, int index){
     (*taille)--; 
 }
 
+// Procédure permettant d'adopter un animal en saisissant son ID 
 void adopter_animal(Animal tab[], int *taille){
     int i,j;
     int num_id;
