@@ -1,3 +1,4 @@
+// Procedure permettant de selectionner le type d'espece 
 void selectionneur_espece(char *espece){
     int choix;
     do{
@@ -35,8 +36,8 @@ void selectionneur_espece(char *espece){
     }
 }
   
-  
-  
+
+// Procedure permettant de cree un animal 
 void creation_animaux(Animal tab[],int taille){
     
     if(taille + 1 > 49){
