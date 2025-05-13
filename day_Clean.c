@@ -1,3 +1,4 @@
+// Fonction permettant de calculer le temps requis pour nettoyer l'ensemble du refuge
 int day_Clean(Animal tab[], int taille) {
     int nettoyage;
 
